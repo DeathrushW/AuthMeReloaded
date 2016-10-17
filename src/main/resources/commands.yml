@@ -1,0 +1,10 @@
+onJoin:
+  broadcast:
+    command: broadcast %p has joined
+    as: CONSOLE
+  whisper:
+    command: msg %p welcome to the server
+    as: USER
+onRegister:
+  tp:
+    command: spawn
