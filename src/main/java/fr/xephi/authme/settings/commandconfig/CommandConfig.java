@@ -1,16 +1,14 @@
 package fr.xephi.authme.settings.commandconfig;
 
-import com.github.authme.configme.SettingsHolder;
-
 import java.util.Collections;
 import java.util.Map;
 
 /**
  * Command configuration.
  *
- * @see CommandsManager
+ * @see CommandManager
  */
-public class CommandConfig implements SettingsHolder {
+public class CommandConfig {
 
     private Map<String, Command> onJoin = Collections.emptyMap();
     private Map<String, Command> onLogin = Collections.emptyMap();

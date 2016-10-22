@@ -3,8 +3,6 @@ package fr.xephi.authme.datasource;
 import com.google.common.io.Files;
 import fr.xephi.authme.TestHelper;
 import fr.xephi.authme.data.auth.PlayerAuth;
-import fr.xephi.authme.datasource.DataSource;
-import fr.xephi.authme.datasource.FlatFile;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
@@ -15,12 +13,8 @@ import java.io.IOException;
 import java.util.Collection;
 import java.util.List;
 
-import static fr.xephi.authme.AuthMeMatchers.equalToHash;
-import static fr.xephi.authme.AuthMeMatchers.hasAuthBasicData;
-import static fr.xephi.authme.AuthMeMatchers.hasAuthLocation;
-import static org.hamcrest.Matchers.equalTo;
-import static org.hamcrest.Matchers.hasItem;
-import static org.hamcrest.Matchers.hasSize;
+import static fr.xephi.authme.AuthMeMatchers.*;
+import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.assertThat;
 
 /**

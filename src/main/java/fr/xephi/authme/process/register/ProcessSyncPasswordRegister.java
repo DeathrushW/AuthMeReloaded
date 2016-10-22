@@ -7,7 +7,7 @@ import fr.xephi.authme.permission.AuthGroupType;
 import fr.xephi.authme.process.ProcessService;
 import fr.xephi.authme.process.SynchronousProcess;
 import fr.xephi.authme.service.BungeeService;
-import fr.xephi.authme.settings.commandconfig.CommandsManager;
+import fr.xephi.authme.settings.commandconfig.CommandManager;
 import fr.xephi.authme.settings.properties.EmailSettings;
 import fr.xephi.authme.settings.properties.HooksSettings;
 import fr.xephi.authme.settings.properties.RegistrationSettings;
@@ -34,7 +34,7 @@ public class ProcessSyncPasswordRegister implements SynchronousProcess {
     private LimboPlayerTaskManager limboPlayerTaskManager;
 
     @Inject
-    private CommandsManager commandsManager;
+    private CommandManager commandManager;
 
     ProcessSyncPasswordRegister() {
     }
@@ -76,7 +76,7 @@ public class ProcessSyncPasswordRegister implements SynchronousProcess {
         }
 
         // Register is now finished; we can force all commands
-        commandsManager.runCommandsOnRegister(player);
+        commandManager.runCommandsOnRegister(player);
 
         // Request login after registration
         if (service.getProperty(RegistrationSettings.FORCE_LOGIN_AFTER_REGISTER)) {

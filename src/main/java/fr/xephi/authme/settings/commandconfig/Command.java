@@ -8,7 +8,7 @@ public class Command {
     /** The command to execute. */
     private String command;
     /** The executor of the command. */
-    private Executor executor = Executor.USER;
+    private Executor executor = Executor.PLAYER;
 
     public String getCommand() {
         return command;

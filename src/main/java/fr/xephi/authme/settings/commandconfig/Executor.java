@@ -6,7 +6,7 @@ package fr.xephi.authme.settings.commandconfig;
 public enum Executor {
 
     /** The player of the event. */
-    USER,
+    PLAYER,
 
     /** The console user. */
     CONSOLE
